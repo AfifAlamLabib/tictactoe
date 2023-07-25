@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(#7f53ac, #647dee) fixed;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .cell {
+            border: 2px solid white;
+            width: 100px;
+            height: 100px;
+            font-size: 48px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .cell:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div id="board" class="row">
+            <div class="col cell" onclick="placeSymbol(0)"></div>
+            <div class="col cell" onclick="placeSymbol(1)"></div>
+            <div class="col cell" onclick="placeSymbol(2)"></div>
+        </div>
+        <div class="row">
+            <div class="col cell" onclick="placeSymbol(3)"></div>
+            <div class="col cell" onclick="placeSymbol(4)"></div>
+            <div class="col cell" onclick="placeSymbol(5)"></div>
+        </div>
+        <div class="row">
+            <div class="col cell" onclick="placeSymbol(6)"></div>
+            <div class="col cell" onclick="placeSymbol(7)"></div>
+            <div class="col cell" onclick="placeSymbol(8)"></div>
+        </div>
+    </div>
+
+    <script>
+        var _0x4c27 = ["\x58", "\x2E\x63\x65\x6C\x6C", "\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72\x41\x6C\x6C", "\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C", "", "\x61\x64\x64", "\x63\x6C\x61\x73\x73\x4C\x69\x73\x74", "\x20\x77\x69\x6E\x73\x21", "\x49\x74\x27\x73\x20\x61\x20\x64\x72\x61\x77\x21", "\x4F", "\x63\x6F\x6E\x74\x61\x69\x6E\x73", "\x65\x76\x65\x72\x79", "\x73\x6F\x6D\x65", "\x72\x65\x6D\x6F\x76\x65", "\x66\x6F\x72\x45\x61\x63\x68"]; let currentPlayer = _0x4c27[0]; const cells = document[_0x4c27[2]](_0x4c27[1]); let moves = 0; function placeSymbol(_0xe102x5) { if (cells[_0xe102x5][_0x4c27[3]] === _0x4c27[4]) { cells[_0xe102x5][_0x4c27[3]] = currentPlayer; cells[_0xe102x5][_0x4c27[6]][_0x4c27[5]](currentPlayer); moves++; if (checkWin(currentPlayer)) { alert(currentPlayer + _0x4c27[7]); resetBoard(); return }; if (moves === 9) { alert(_0x4c27[8]); resetBoard(); return }; currentPlayer = currentPlayer === _0x4c27[0] ? _0x4c27[9] : _0x4c27[0] } } function checkWin(_0xe102x7) { const _0xe102x8 = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]; return _0xe102x8[_0x4c27[12]]((_0xe102x9) => { return _0xe102x9[_0x4c27[11]]((_0xe102x5) => { return cells[_0xe102x5][_0x4c27[6]][_0x4c27[10]](_0xe102x7) }) }) } function checkDraw() { return [...cells][_0x4c27[11]]((_0xe102xb) => { return _0xe102xb[_0x4c27[3]] !== _0x4c27[4] }) } function resetBoard() { cells[_0x4c27[14]]((_0xe102xb) => { _0xe102xb[_0x4c27[3]] = _0x4c27[4]; _0xe102xb[_0x4c27[6]][_0x4c27[13]](_0x4c27[0], _0x4c27[9]) }); currentPlayer = _0x4c27[0] }
+    </script>
+</body>
+
+</html>

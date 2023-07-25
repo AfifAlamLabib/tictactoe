@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(#7f53ac, #647dee);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.cell {
+    border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
